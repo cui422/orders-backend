@@ -1,19 +1,19 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const OrderSchema = new mongoose.Schema(
   {
-    state: String
+    state: String,
   },
-  { collection: "Order" }
+  { collection: 'Order' }
 );
 
-const OrdersModel = mongoose.model("Order", OrderSchema);
+const OrdersModel = mongoose.model('Order', OrderSchema);
 
-OrdersModel.getOrder = orderId => {
+OrdersModel.getOrder = (orderId) => {
   return OrdersModel.findOne({ _id: orderId });
 };
 
-OrdersModel.createOrder = orderToCreate => {
+OrdersModel.createOrder = (orderToCreate) => {
   return orderToCreate.save();
 };
 
