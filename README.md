@@ -18,3 +18,6 @@ npm start
 - POST 127.0.0.1:3000/api/{orderId}/cancel
 
 - GET 127.0.0.1:3000/api/orders/{orderId}
+
+
+NOTE: Please make sure if payment-backend is already running before running order-backend.
